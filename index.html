@@ -137,13 +137,35 @@
         }
 
         .publication {
+            display: flex;
+            gap: 20px;
             margin: 25px 0;
             padding: 20px 0;
             border-bottom: 1px solid #eee;
+            align-items: flex-start;
         }
 
         .publication:last-child {
             border-bottom: none;
+        }
+
+        .pub-image {
+            flex-shrink: 0;
+            width: 150px;
+            height: 100px;
+        }
+
+        .pub-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pub-content {
+            flex: 1;
         }
 
         .pub-title {
@@ -264,6 +286,16 @@
                 font-size: 0.85em;
                 padding: 6px 12px;
             }
+            
+            .publication {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .pub-image {
+                width: 100%;
+                height: 120px;
+            }
         }
     </style>
 </head>
@@ -271,7 +303,7 @@
     <div class="header">
         <div class="profile-section">
             <div class="profile-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=180&h=180&fit=crop&crop=face&auto=format&q=80" alt="Your Name Profile Photo">
+                <img src="./assets/JunseoKim.jpg" alt="JunseoKim">
             </div>
             <div class="profile-info">
                 <h1>Your Name</h1>
@@ -281,13 +313,13 @@
                 </div>
                 
                 <div class="social-links">
-                    <a href="mailto:your-email@institution.edu">
+                    <a href="mailto:junseo.kim@vision.snu.ac.kr">
                         <i class="fas fa-envelope"></i> Email
                     </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                    <a href="https://www.linkedin.com/in/junseo-kim-bb8427373/" target="_blank">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
-                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+                    <a href="https://scholar.google.com/citations?user=gp08b0MAAAAJ&hl=ko" target="_blank">
                         <i class="fas fa-graduation-cap"></i> Google Scholar
                     </a>
                     <a href="https://github.com/yourusername" target="_blank">
@@ -323,19 +355,22 @@
         <h2>Recent News</h2>
         <ul class="news-list">
             <li class="news-item">
-                <span class="news-date">May 2025</span> - I will be a keynote speaker at [Conference Name]!
+                <span class="news-date">Sep 2025</span> - Started Ph.D. in Interdisciplinary Program in AI (IPAI) at Graduate School of AI, Seoul National University
             </li>
             <li class="news-item">
-                <span class="news-date">Jan 2025</span> - I'll be joining [Institution Name] as [Position] in [Year]!
+                <span class="news-date">Aug 2025</span> - Our paper on FlashAdventure has been accepted to EMNLP 2025!
             </li>
             <li class="news-item">
-                <span class="news-date">Dec 2024</span> - Our paper on [Topic] has been accepted to [Conference]!
+                <span class="news-date">Jun 2025</span> - Our paper on personalized visual persuasion has been accepted to ACL 2025!
             </li>
             <li class="news-item">
-                <span class="news-date">Nov 2024</span> - Gave an invited talk at [Institution] about [Topic].
+                <span class="news-date">Sep 2024</span> - Started undergraduate internship at SNUVL Lab, Department of Computer Science and Engineering, Seoul National University
             </li>
             <li class="news-item">
-                <span class="news-date">Oct 2024</span> - <span class="emoji">🏆</span> Our work won the <span class="award">Outstanding Paper Award</span> at [Conference]!
+                <span class="news-date">Sep 2024</span> - Successfully completed 9-month internship at HOLI Lab
+            </li>
+            <li class="news-item">
+                <span class="news-date">Dec 2023</span> - Joined HOLI Lab at Graduate School of Data Science, Seoul National University as undergraduate intern
             </li>
         </ul>
     </div>
@@ -344,46 +379,37 @@
         <h2>Publications</h2>
         
         <div class="publication">
-            <div class="pub-title">
-                <a href="#" target="_blank">Your Latest Paper Title: An Innovative Approach to Solving Important Problems</a>
+            <div class="pub-image">
+                <img src="./assets/fig_keyidea.png" alt="FlashAdventure Paper">
             </div>
-            <div class="pub-authors">
-                Your Name, Collaborator One, Collaborator Two, Senior Author
+            <div class="pub-content">
+                <div class="pub-title">
+                    <a href="#" target="_blank">FlashAdventure: A Benchmark for GUI Agents Solving Full Story Arcs in Diverse Adventure Games</a>
+                </div>
+                <div class="pub-authors">
+                    Jaewoo Ahn*, Junseo Kim*, Heeseung Yun, Jaehyeon Son, Dongmin Park, Jaewoong Cho, Gunhee Kim (* equal contribution)
+                </div>
+                <div class="pub-venue">EMNLP 2025</div>
             </div>
-            <div class="pub-venue">Conference/Journal Name 2025</div>
         </div>
 
         <div class="publication">
-            <div class="pub-title">
-                <a href="#" target="_blank">Another Important Research Contribution</a>
+            <div class="pub-image">
+                <img src="./assets/Dalle_Google_Example.pdf" alt="PVP Paper">
             </div>
-            <div class="pub-authors">
-                Collaborator One*, Your Name*, Other Authors (* equal contribution)
+            <div class="pub-content">
+                <div class="pub-title">
+                    <a href="https://arxiv.org/abs/2506.00481" target="_blank">PVP: An Image Dataset for Personalized Visual Persuasion with Persuasion Strategies, Viewer Characteristics, and Persuasiveness Ratings</a>
+                </div>
+                <div class="pub-authors">
+                    Junseo Kim, Jongwook Han, Dongmin Choi, Jongwook Yoon, Eun-Ju Lee, Yohan Jo
+                </div>
+                <div class="pub-venue">ACL 2025 (Main Conference)</div>
             </div>
-            <div class="pub-venue">Top Conference 2024 · <span class="award">Best Paper Award</span></div>
-        </div>
-
-        <div class="publication">
-            <div class="pub-title">
-                <a href="#" target="_blank">Groundbreaking Work in Your Field</a>
-            </div>
-            <div class="pub-authors">
-                Your Name, Research Team Members
-            </div>
-            <div class="pub-venue">Journal Name 2024 · Oral</div>
-        </div>
-
-        <div class="publication">
-            <div class="pub-title">
-                <a href="#" target="_blank">Earlier Research That Made Impact</a>
-            </div>
-            <div class="pub-authors">
-                Your Name, Advisor Name, Other Collaborators
-            </div>
-            <div class="pub-venue">Conference 2023</div>
         </div>
     </div>
 
+    <!-- Honors & Awards 섹션 - 필요할 때 주석 해제하세요
     <div class="section">
         <h2>Honors & Awards</h2>
         <ul class="honors-list">
@@ -414,6 +440,7 @@
             </li>
         </ul>
     </div>
+    -->
 
     <div class="section">
         <h2>About Me</h2>
