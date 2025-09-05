@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junseo Kim - Academic Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -108,7 +109,13 @@
             color: #fff;
             text-align: center;
             line-height: 36px;
-            font-size: 18px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .social-icons .google { background-color: #db4437; }
@@ -146,15 +153,37 @@
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
+        /* Fixed highlight box styles */
         .highlight-box {
             background-color: #f0f8ff;
             border-left: 4px solid #0066cc;
-            padding: 15px 20px;
+            padding: 20px 25px;
             margin: 20px 0;
             border-radius: 4px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            line-height: 1.7;
         }
 
-        .highlight-box strong { color: #0066cc; }
+        .highlight-box p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .highlight-box strong { 
+            color: #0066cc; 
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box br {
+            line-height: 1.2;
+        }
+
+        .highlight-box a {
+            word-break: break-word;
+        }
 
         .news-item {
             margin-bottom: 0.8em;
@@ -241,6 +270,29 @@
                 margin-left: 0;
                 padding: 30px 20px;
             }
+
+            /* Mobile-specific highlight box fixes */
+            .highlight-box {
+                padding: 15px 20px;
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+
+            .highlight-box strong {
+                font-size: 1em;
+            }
+        }
+
+        /* Additional fixes for very small screens */
+        @media (max-width: 480px) {
+            .highlight-box {
+                padding: 12px 15px;
+                font-size: 0.9em;
+            }
+            
+            .main-content {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
@@ -266,10 +318,10 @@
             </div>
 
             <div class="social-icons">
-                <a href="https://scholar.google.com/citations?user=gp08b0MAAAAJ&hl=ko" class="google" title="Google Scholar">G</a>
-                <a href="https://twitter.com/Junseo_Kim_0103" class="twitter" title="Twitter / X">T</a>
-                <a href="https://github.com/JunseoKim0103" class="github" title="GitHub">G</a>
-                <a href="https://www.linkedin.com/in/junseo-kim-bb8427373/" class="linkedin" title="LinkedIn">L</a>
+                <a href="https://scholar.google.com/citations?user=gp08b0MAAAAJ&hl=ko" class="google" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://twitter.com/Junseo_Kim_0103" class="twitter" title="Twitter / X"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/JunseoKim0103" class="github" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/junseo-kim-bb8427373/" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
 
@@ -279,7 +331,9 @@
                 <p>Hello, 안녕하세요</p>
 
                 <div class="highlight-box">
-                    <p><strong>[📣 2025 Update]</strong><br> I started my Ph.D. in the <a href="https://gsai.snu.ac.kr/" title="IPAI at SNU">Interdisciplinary Program in AI (IPAI)</a> at the Graduate School of AI, <a href="#" title="SNU">Seoul National University</a> in Sep 2025. <br> Our recent works on <em>FlashAdventure</em> (EMNLP 2025) and <em>Personalized Visual Persuasion</em> (ACL 2025) are now available. I'm always happy to chat about social intelligence, game & embodied agent, evaluation, and multimodal reasoning.</p>
+                    <p><strong>[📣 2025 Update]</strong><br> 
+                    I started my Ph.D. in the <a href="https://gsai.snu.ac.kr/" title="IPAI at SNU">Interdisciplinary Program in AI (IPAI)</a> at the Graduate School of AI, <a href="#" title="SNU">Seoul National University</a> in Sep 2025.<br><br>
+                    Our recent works on <em>FlashAdventure</em> (EMNLP 2025) and <em>Personalized Visual Persuasion</em> (ACL 2025) are now available. I'm always happy to chat about social intelligence, game & embodied agent, evaluation, and multimodal reasoning.</p>
                 </div>
 
                 <p>I'm currently a Ph.D. student at Seoul National University. <br> 
