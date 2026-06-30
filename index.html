@@ -25,7 +25,8 @@
         /* Left Sidebar */
         .sidebar {
             width: 400px;
-            background-color: #f8f9fa;
+            background-color: #fff;
+            border-right: 1px solid #eee;
             padding: 40px 35px;
             position: fixed;
             height: 100vh;
@@ -100,28 +101,14 @@
 
         .social-icons a {
             display: inline-block;
-            margin: 0 6px;
-            width: 36px;
-            height: 36px;
-            background-color: #ddd;
-            border-radius: 4px;
+            margin: 0 9px;
+            color: #555;
             text-decoration: none;
-            color: #fff;
-            text-align: center;
-            line-height: 36px;
-            font-size: 16px;
-            transition: all 0.3s ease;
+            font-size: 20px;
+            transition: color 0.2s ease;
         }
 
-        .social-icons a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .social-icons .google { background-color: #db4437; }
-        .social-icons .twitter { background-color: #1da1f2; }
-        .social-icons .github { background-color: #333; }
-        .social-icons .linkedin { background-color: #0077b5; }
+        .social-icons a:hover { color: #0066cc; }
 
         /* Main Content */
         .main-content {
@@ -155,8 +142,8 @@
 
         /* Fixed highlight box styles */
         .highlight-box {
-            background-color: #f0f8ff;
-            border-left: 4px solid #0066cc;
+            background-color: #fff;
+            border-left: 3px solid #e5e5e5;
             padding: 20px 25px;
             margin: 20px 0;
             border-radius: 4px;
@@ -171,8 +158,8 @@
             text-align: left;
         }
 
-        .highlight-box strong { 
-            color: #0066cc; 
+        .highlight-box strong {
+            color: #000;
             display: inline-block;
             margin-bottom: 8px;
         }
@@ -201,6 +188,19 @@
         }
 
         .news-date { font-weight: 600; color: #666; }
+
+        .experience-item { margin-bottom: 1.3em; }
+
+        .exp-period {
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 0.15em;
+        }
+
+        .exp-org { font-weight: 600; color: #000; }
+
+        .exp-role { color: #555; font-size: 0.95em; }
 
         .publication {
             margin-bottom: 1.5em;
@@ -330,42 +330,53 @@
             <div class="intro-section">
                 <p>Hello, I'm Junseo Kim.</p>
 
-                <div class="highlight-box">
-                    <p><strong>[📣 2025 Update]</strong><br> 
-                    I started my integrated M.S./Ph.D. in the <a href="https://gsai.snu.ac.kr/" title="IPAI at SNU">Interdisciplinary Program in AI (IPAI)</a> at the Graduate School of AI, <a href="#" title="SNU">Seoul National University</a> in Sep 2025.<br><br>
-                    Our recent works on <em>FlashAdventure</em> (EMNLP 2025) and <em>Personalized Visual Persuasion</em> (ACL 2025) are now available. I'm always happy to chat about social intelligence, game & embodied agent, evaluation, and multimodal reasoning.</p>
-                </div>
-
                 <p>
                 I'm an integrated M.S./Ph.D. student at Seoul National University, advised by 
-                <a href="https://vision.snu.ac.kr/gunhee/" title="Gunhee Kim's Lab at SNU">Professor Gunhee Kim</a>.<br>
-                Previously, I was an undergraduate intern at HOLI Lab (Graduate School of Data Science, SNU) and SNUVL Lab (Department of Computer Science and Engineering, SNU).<br>
-                My research lies at the intersection of <b>embodied AI, multimodal reasoning, and social–cognitive reasoning</b>, with the goal of building <b>human-centered agents</b> that interact naturally and meaningfully with people.<br>
-                I focus on developing <b>reasoning-driven embodied agents</b> capable of both verbal and nonverbal communication, while also exploring <b>evaluation, cognitive modeling, and value alignment</b> to ensure these systems act in ways consistent with human values and social good.
+                <a href="https://vision.snu.ac.kr/gunhee/" title="Gunhee Kim's Lab at SNU">Professor Gunhee Kim</a>.
+                My research aims to build <b>human-centered, trustworthy agents</b> that understand the world both socially and physically, and that act and communicate consistently with what they know and the norms they should uphold. I draw on <b>cognitive reasoning</b> and <b>communication theory</b> to understand how agents reason and how they convey what they know to others.
+                </p>
+                <p>
+                Toward this goal, I study how agents can read and reason about the <b>social world</b> — intentions, deception, persuasion, and social hierarchies; how they acquire <b>physical common sense</b> through causal world models of embodied environments; and how to close the <b>knowing–doing gap</b> between what agents know or value and how they actually act and communicate.
                 </p>
             </div>
 
-            <h2>Recent News</h2>
-            <div class="news-item">
-                <span class="news-date">Sep 2025</span> — Started Ph.D. in Interdisciplinary Program in AI (IPAI) at the Graduate School of AI, Seoul National University.
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <div class="exp-period">Dec 2023 – Sep 2024</div>
+                <div class="exp-org">Graduate School of Data Science, Seoul National University</div>
+                <div class="exp-role">Undergraduate Internship at HOLI Lab</div>
             </div>
-            <div class="news-item">
-                <span class="news-date">Aug 2025</span> — Our paper on <em>FlashAdventure</em> has been accepted to EMNLP 2025!
+
+            <div class="experience-item">
+                <div class="exp-period">Sep 2024 – Aug 2025</div>
+                <div class="exp-org">Department of Computer Science and Engineering, Seoul National University</div>
+                <div class="exp-role">Undergraduate Internship at SNUVL Lab</div>
             </div>
-            <div class="news-item">
-                <span class="news-date">Jun 2025</span> — Our paper on personalized visual persuasion has been accepted to ACL 2025!
-            </div>
-            <div class="news-item">
-                <span class="news-date">Sep 2024</span> — Started undergraduate internship at SNUVL Lab, Department of Computer Science and Engineering, Seoul National University.
-            </div>
-            <div class="news-item">
-                <span class="news-date">Sep 2024</span> — Successfully completed a 9-month internship at HOLI Lab.
-            </div>
-            <div class="news-item">
-                <span class="news-date">Dec 2023</span> — Joined HOLI Lab (Graduate School of Data Science, SNU) as an undergraduate intern.
+
+            <div class="experience-item">
+                <div class="exp-period">Sep 2025 – Present</div>
+                <div class="exp-org">Graduate School of AI, Seoul National University</div>
+                <div class="exp-role">Ph.D. Student, under the supervision of <a href="https://vision.snu.ac.kr/gunhee/" target="_blank" rel="noopener">Prof. Gunhee Kim</a></div>
             </div>
 
             <h2>Publications</h2>
+
+            <div class="publication">
+                <div class="paper-title">
+                    Lies We Can See: Joint Verbal and Non-Verbal Deception by VLM Agents in Embodied Social Interactions
+                </div>
+                <div class="authors">Jaewoo Ahn*, <strong>Junseo Kim*</strong>, Hyunseo Kim, Heeseung Yun, Jaehyeon Son, Dongmin Park, Jaewoong Cho, Gunhee Kim (* equal contribution)</div>
+                <div class="venue">Under Review</div>
+            </div>
+
+            <div class="publication">
+                <div class="paper-title">
+                    Honorific Speech and the Spiral of Silence: Implicit Hierarchies in Korean LLM Multi-Agent Debates
+                </div>
+                <div class="authors"><strong>Junseo Kim</strong>, Gunhee Kim</div>
+                <div class="venue">KCC 2026</div>
+            </div>
 
             <div class="publication">
                 <div class="paper-title">
@@ -388,6 +399,7 @@
 
             <h2>About Me</h2>
             <p>I'm someone who gains energy through conversations with people, and I enjoy sharing research ideas and working together to solve problems. I'm open to collaborating across diverse fields, and I'd love to exchange ideas even if we are not in the same area.</p>
+            <p>Outside the lab, I have two long-standing passions: brewing <b>hand-drip pour-over coffee</b>, which I've enjoyed for over five years, and following <b>Formula 1</b> 🏎️ as a long-time fan, proudly flying the <b style="color:#FF8000;">papaya</b> flag for <b>McLaren</b>.</p>
         </div>
     </div>
 </body>
